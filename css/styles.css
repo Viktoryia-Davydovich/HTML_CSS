@@ -203,7 +203,7 @@ a:hover{
 
 .bckg-orange{
     text-align: center;
-    padding-top: 65px;
+    padding-top: 50px;
 }
 
 .bckg-orange img{
@@ -236,37 +236,27 @@ a:hover{
     cursor: pointer;
 }
 
-.line{
-    width: 46%;
-}
-
 .line-with-arrows{
-    margin-top: 38px;
+margin-top: 50px;
+text-align: center;
 }
 
-.line1{
-    float: left;
+.line{
+display: inline;
+padding: 5px;
 }
 
-.line2{
-    float: right;
+.line-half{
+    padding-bottom: 10px;
+    width: 45%;
+    border-top: 1px solid rgb(213, 213, 213);
+    display: inline-block;
 }
-
-.line-arr1, .line-arr2{
-    float: left;
-    padding-left:16px;
-}
-
-hr{
-    border-color: white;
-}
-
-.sep-line{
-    margin-top: 47px;
-}
-
 
 .feedbacks-section{
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid rgb(213, 213, 213); 
     display: table;
 }
 
@@ -276,6 +266,7 @@ hr{
 
 .fdb{
     display: flex;
+    padding-right: 15px;
 }
 
 .column p{
@@ -306,7 +297,7 @@ hr{
 
 .gray-ft{
     background-color: rgb(99, 127, 131);
-    margin-top: 27px;
+    margin-top: 40px;
 }
 
 .ft1{
