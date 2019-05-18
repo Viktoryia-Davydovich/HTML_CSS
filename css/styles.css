@@ -1,6 +1,7 @@
 body{
     margin:0;
     height:100%;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .header{
@@ -22,8 +23,7 @@ body{
 .nav-logo{
     float: left;
     width: 50%;
-    font-size: 32px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 32px;   
     color: rgb(99, 127, 131);
     text-align: center;
     font-weight: bold;
@@ -52,8 +52,7 @@ body{
     list-style-type: none;
     float: left;
     padding-left: 25px;
-    font-size: 14px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;   
     color: rgb(99, 127, 131);
     font-weight: bold;
     text-transform: uppercase;
@@ -135,7 +134,7 @@ a:hover{
 }
 
 .text-stripe p, .text-stripe2 p{
-    font-family: 'Source Sans Pro', sans-serif;
+    
     line-height: 0.2em;
     color: rgb(99, 127, 131);
 }
@@ -144,6 +143,7 @@ a:hover{
     font-size: 24px;
     font-weight: bold;
 }
+
 
 .options-stripe{
     margin-top: 30px;
@@ -156,9 +156,7 @@ a:hover{
 
 .option{
     display: table-cell;
-
     height: 310px;
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
     padding: 15px;
     color: rgb(99, 127, 131);
@@ -186,8 +184,7 @@ a:hover{
     border-radius: 4px;
     height: 30px;
     width: 65px;
-    margin-top: 15px;
-    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 15px;   
     font-weight: bolder;
   }
 
@@ -223,8 +220,7 @@ a:hover{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 4px;
-    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 4px;   
     font-weight: bolder;
     margin-top: 40px;
     height: 40px;
@@ -254,7 +250,7 @@ padding: 5px;
 }
 
 .feedbacks-section{
-    margin-top: 40px;
+    margin: 40px 0;
     padding-top: 40px;
     border-top: 1px solid rgb(213, 213, 213); 
     display: table;
@@ -270,8 +266,7 @@ padding: 5px;
 }
 
 .column p{
-    padding-left: 20px;
-    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 20px;   
     font-size: 12px;
     color: rgb(99, 127, 131);
     vertical-align: top;
@@ -297,126 +292,119 @@ padding: 5px;
 
 .gray-ft{
     background-color: rgb(99, 127, 131);
-    margin-top: 40px;
 }
 
-.ft1{
+.gray-ft-first-line{
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 0.5px solid rgb(89, 114, 117);
+    color: white;
+    line-height: 1.2;
 }
 
-.p1-ft span{
+.gray-ft-first-line p span{
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.p1-ft {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: white;
-    line-height: 1.2;
+
+.gray-ft-subscr{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-.cellw{
-    display: table-row;
+.gray-ft-subscr-form, .gray-ft-twitter-post{
+    width: 50%;
+    padding-right: 15px;
 }
 
-.cell{
-    display: table-cell;
+.gray-ft-newsltr, .gray-ft-twitter-post{
+    display: flex;
+}
+
+
+.subscr-mail-txt p span{
+    font-weight: bolder;
+    font-size: 16px;
+
+}
+
+.subscr-form{
+    margin-top: 25px;
+    vertical-align: bottom;
 }
 
 
 .inpfield{
     width: 70%;
-    display: table-cell;
     background-color:rgb(89, 114, 117);
     border: none;
     color: white;
     font-size: 14px;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    margin-top: 15px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bolder;
-    height: 32px;
+    border-radius: 5px;
+    height: 33px;
     padding-left: 10px;
 }
 
-form{
-    width: 540px;
-    margin-bottom: 45px;
-}
 .submbtn{
-    display: table-cell;
     background-color:rgb(89, 114, 117);
-    border: none;
     color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 4px;
-    height: 32px;
-    letter-spacing: 1px;
-    width: 85px;
-    margin-top: 15px;
-    font-family: 'Source Sans Pro', sans-serif;
+    height: 35px;
+    width: 20%;
+    border: none;
+    border-radius: 5px;
     font-weight: bolder;
-    margin-left: 7px;
+    font-size: 14px;
+    margin-left: 20px;
 }
 
 .submbtn:hover{
     cursor: pointer;
 }
 
-.cellmailimg {
-position: relative;
-top: 19px;
+.gray-ft-twitter-post{
+    align-items: flex-start;
+    background-color: rgb(89, 114, 117);
+    border-radius: 4px;
+    padding: 20px;
 }
 
-.celltxt{
-    padding-top: 0px;
-    padding-left: 15px;
-}
-
-.celltxt p {
-    font-family: 'Source Sans Pro', sans-serif;
+.subscr-mail-txt, .twitter-txt{
+    padding-left: 25px;
     color: white;
     line-height: 1.5em;
     font-size: 14px;
 }
 
-.celltxt p span{
-    font-size: 18px;
-    font-weight: bolder;
+.subscr-mail-img, .twitter-img{
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-.twittercit{
-    background-color: rgb(89, 114, 117);
-    border-radius: 4px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    top: 31px;
-}
-
-.celldoveimg{
-    position: relative;
-    top: 31px;
+.twitter-txt p, .subscr-mail-txt p{
+    margin: 0;
 }
 
 .twitlink{
     text-decoration: underline;
+    font-weight: bolder;
+}
+/* second */
+
+.white-ft{
+    margin-top: 30px;
+    text-align: center;
 }
 
 .round-img{
     background: url('../images/cir.png') no-repeat center center;
     width: 70px;
-    height:70px;
     background-size:contain;
+    vertical-align: middle;
 }
 .fb{
     background: url('../images/fb.png') no-repeat center center;
@@ -436,8 +424,31 @@ top: 19px;
     height:70px;
 }
 
+
+.col{
+    display: inline-flex;
+}
+
+.soctxt{
+    width: 250px;   
+    color: rgb(99, 127, 131);
+    line-height: 1.5em;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+.soctxt p span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* third */
+
 .ft-gr3-txt{
-    font-family: 'Source Sans Pro', sans-serif;
+    
     color: white;
     line-height: 1.5em;
     font-size: 14px;
@@ -446,35 +457,4 @@ top: 19px;
 
 .ft2{
     text-align: center;
-}
-
-.col{
-    display: inline-block;
-}
-
-.white-ft{
-    margin: 30px;
-
-}
-
-.soctxt{
-    width: 250px;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: rgb(99, 127, 131);
-    line-height: 1.5em;
-    font-size: 14px;
-    padding-left: 17px;
-    position: relative;
-    bottom: 15px;
-}
-
-.soctxt p span{
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.white-row{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
 }
