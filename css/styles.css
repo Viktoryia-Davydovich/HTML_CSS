@@ -1,7 +1,12 @@
+html{
+    height:100%;
+}
+
 body{
     margin:0;
     height:100%;
-	font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
 }
 
 header{
@@ -17,7 +22,7 @@ header{
 }
 
 .header-stripe{
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -29,7 +34,7 @@ header{
     font-size: 32px;   
     color: rgb(99, 127, 131);
     text-align: center;
-    font-weight: bold;
+    font-weight: 900;
 
 }
 
@@ -49,10 +54,11 @@ header{
 
 .nav-stripe li{
     list-style-type: none;
-    padding-right: 35px;
-    font-size: 14px;   
+    padding-right: 45px;  
     color: rgb(99, 127, 131);
-    font-weight: bold;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1.2;
     text-transform: uppercase;
 }
 
@@ -64,28 +70,29 @@ header{
 /* BACKGROUND PCT */
 
 .main-pict{
-    background: url('../images/header_background.png') no-repeat center center;
-    background-size: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    height: 330px;
+    background: url('../images/wallpaperwidecom.png') no-repeat center center;
     text-align: center;
+    width: 100%;
+    height: 550px;
+    background-position-y: top;
 }
 
 .bckg-text-big{
-    font-size: 28px;
+    font-size: 40px;
     font-family: 'PT Sans', sans-serif;
     color: white;
     font-weight: bolder;
     text-decoration: underline;
-    padding-top: 40px;
+    padding-top: 7%;
     letter-spacing: 1.7px;
-    line-height: 1.3em;
+    line-height: 1.4;
+    letter-spacing: 0.25rem;
+    text-underline-position: under;
 }
 
 .bckg-text-small{
-    margin-top: -15px;
-    font-size: 12px;
+
+    font-size: 16px;
     font-family: 'Lato', sans-serif;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
@@ -99,6 +106,16 @@ header{
     width:50px;
     height:50px;
     background-size:contain;
+    animation: move 1s infinite alternate;
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(0px)
+    }
+    100%{
+        transform: translateY(20px)
+    }
 }
 .bckg-img-arr{
     background: url('../images/arrow.png') no-repeat center center;
@@ -119,7 +136,7 @@ a:hover{
 /* MAIN PART */
 
 .text-stripe {
-    padding-top: 15px;
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -130,7 +147,7 @@ a:hover{
 }
 
 .p1{
-    font-size: 24px;
+    font-size: 34px;
     font-weight: bold;
 }
 
@@ -147,7 +164,6 @@ a:hover{
 .option{
     display: table-cell;
     height: 310px;
-    font-size: 14px;
     padding: 15px;
     color: rgb(99, 127, 131);
     vertical-align: middle;
@@ -334,7 +350,6 @@ padding: 5px;
     background-color:rgb(89, 114, 117);
     border: none;
     color: white;
-    font-size: 14px;
     border-radius: 5px;
     height: 33px;
     padding-left: 10px;
@@ -348,7 +363,6 @@ padding: 5px;
     border: none;
     border-radius: 5px;
     font-weight: bolder;
-    font-size: 14px;
     margin-left: 20px;
 }
 
@@ -367,7 +381,6 @@ padding: 5px;
     padding-left: 25px;
     color: white;
     line-height: 1.5em;
-    font-size: 14px;
 }
 
 .subscr-mail-img, .twitter-img{
@@ -423,7 +436,6 @@ padding: 5px;
     width: 250px;   
     color: rgb(99, 127, 131);
     line-height: 1.5em;
-    font-size: 14px;
     text-align: left;
     padding-left: 10px;
     vertical-align: middle;
@@ -441,7 +453,6 @@ padding: 5px;
     
     color: white;
     line-height: 1.5em;
-    font-size: 14px;
     padding: 20px;
 }
 
