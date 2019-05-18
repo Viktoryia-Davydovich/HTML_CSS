@@ -4,7 +4,7 @@ body{
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-.header{
+header{
     margin:0;
     width: 100%;
 }
@@ -16,54 +16,44 @@ body{
     overflow-x:hidden;
 }
 
-.nav{
-    height: 60px;
+.header-stripe{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding: 10px 0 10px 0;
 }
 
 .nav-logo{
-    float: left;
     width: 50%;
     font-size: 32px;   
     color: rgb(99, 127, 131);
     text-align: center;
     font-weight: bold;
-    padding-top:11px;
+
 }
 
 /* MENU*/
 
-.nav{
-    width: 80%;
-}
 
 .menu{
-    float: right;
     width: 50%;
     text-align: left;
 }
 
 .nav-stripe{
     list-style-type: none;
-    float: right;
-    padding-top: 11px;
+    padding-left:0;
+    display: flex;
 }
 
 .nav-stripe li{
     list-style-type: none;
-    float: left;
-    padding-left: 25px;
+    padding-right: 35px;
     font-size: 14px;   
     color: rgb(99, 127, 131);
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 1.2;
-    z-index: 8;
-}
-
-.img-nav-arr-hover{
-    position: absolute;
-    top: 3%;
-    display: none;
 }
 
 .nav-stripe li a:hover{
