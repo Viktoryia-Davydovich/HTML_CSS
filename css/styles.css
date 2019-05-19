@@ -1,18 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
 html{
     height:100%;
 }
 
+
 body{
     margin:0;
+    width: 100%;
     height:100%;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'SourceSansPro', sans-serif;
     font-size: 14px;
 }
 
-header{
-    margin:0;
-    width: 100%;
-}
 
 .container{
     width: 80%;
@@ -21,7 +23,7 @@ header{
     overflow-x:hidden;
 }
 
-.header-stripe{
+.header-nav-logo-stripe{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -30,12 +32,12 @@ header{
 }
 
 .nav-logo{
+    padding-top: 10px;
     width: 50%;
     font-size: 32px;   
     color: rgb(99, 127, 131);
     text-align: center;
     font-weight: 900;
-
 }
 
 /* MENU*/
@@ -52,14 +54,28 @@ header{
     display: flex;
 }
 
+.nav-stripe li img{
+    padding-bottom: 7px;
+    padding-left: 40%;
+    width: 9px;
+    height: 6px;
+    visibility: hidden;
+}
+
 .nav-stripe li{
-    list-style-type: none;
-    padding-right: 45px;  
+    padding-right: 5%;  
     color: rgb(99, 127, 131);
-    font-weight: 900;
+    font-weight: bold;
     font-size: 16px;
     line-height: 1.2;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+}
+
+.nav-stripe :first-child img{
+    visibility: visible;
 }
 
 .nav-stripe li a:hover{
@@ -73,7 +89,7 @@ header{
     background: url('../images/wallpaperwidecom.png') no-repeat center center;
     text-align: center;
     width: 100%;
-    height: 550px;
+    height: 40em;
     background-position-y: top;
 }
 
@@ -135,39 +151,41 @@ a:hover{
 
 /* MAIN PART */
 
-.text-stripe {
-    padding-top: 20px;
+.header-stripe {
+    padding: 40px 0;
     text-align: center;
 }
 
-.text-stripe p, .text-stripe2 p{
-    
-    line-height: 0.2em;
+.header-stripe h1, .header-stripe p{
     color: rgb(99, 127, 131);
+    line-height: 1.4;
+    margin: 0;
 }
 
-.p1{
-    font-size: 34px;
-    font-weight: bold;
+.header-stripe h1 {
+    font-size: 2rem;
+    font-weight: 900;
+
+}
+
+.header-stripe p {
+    font-size: 1.4rem;
+    font-weight: 100;
 }
 
 
 .options-stripe{
-    margin-top: 30px;
+    padding: 0 5%;
     text-align: center;
     background-color: rgb(246, 246, 246);
-    vertical-align: middle;
-    padding-left: 10%;
-    padding-right: 10%;
+    align-items: baseline;
+    display: flex;
 }
 
 .option{
-    display: table-cell;
-    height: 310px;
-    padding: 15px;
+    padding: 5% 3%;
     color: rgb(99, 127, 131);
-    vertical-align: middle;
-    width: 20%;
+    width: 30%;
 }
 
 .option:first-child, .option:nth-child(2), .option:nth-child(3){
@@ -175,8 +193,13 @@ a:hover{
 }
 
 .name{
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
+    line-height: 1.857;
+}
+
+.descr{
+    line-height: 1.429;
 }
 
 .morebtn {
@@ -187,6 +210,7 @@ a:hover{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    line-height: 1.25;
     border-radius: 4px;
     height: 30px;
     width: 65px;
@@ -194,15 +218,10 @@ a:hover{
     font-weight: bolder;
   }
 
+
 .morebtn:hover{
-      cursor: pointer;
+    cursor: pointer;
   }
-
-
-.text-stripe2{
-    padding-top: 35px;
-    text-align: center;
-}
 
 .bckg-orange{
     text-align: center;
@@ -239,7 +258,6 @@ a:hover{
 }
 
 .line-with-arrows{
-margin-top: 50px;
 text-align: center;
 }
 
@@ -264,6 +282,7 @@ padding: 5px;
 
 .row{
     display: flex;
+    margin-bottom: 15px;
 }
 
 .fdb{
@@ -272,53 +291,45 @@ padding: 5px;
 }
 
 .column p{
+    margin-top: 0;
     padding-left: 20px;   
-    font-size: 12px;
+    font-size: 14px;
     color: rgb(99, 127, 131);
     vertical-align: top;
-    line-height: 1.7em;
+    line-height: 1.857;
     letter-spacing: 0.4px;
 }
 
 .column p span{
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
+    line-height: 1.2;
 }
 
-.column img{
-    padding-top: 13px;
-}
 
 .plsmore{
     color: rgb(228, 85, 29);
 }
 
-/* FOOTER */
+/* SUBSCRIPTION FORM & TWITTER  */
 
 
 .gray-ft{
     background-color: rgb(99, 127, 131);
 }
 
-.gray-ft-first-line{
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.wht-fnt{
     border-bottom: 0.5px solid rgb(89, 114, 117);
-    color: white;
-    line-height: 1.2;
 }
 
-.gray-ft-first-line p span{
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1px;
+.wht-fnt h1, .wht-fnt p{
+    color: white;
 }
 
 
 .gray-ft-subscr{
     display: flex;
-    justify-content: center;
+    flex-flow: row;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -328,6 +339,13 @@ padding: 5px;
     padding-right: 15px;
 }
 
+.gray-ft-subscr-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 .gray-ft-newsltr, .gray-ft-twitter-post{
     display: flex;
 }
@@ -335,15 +353,9 @@ padding: 5px;
 
 .subscr-mail-txt p span{
     font-weight: bolder;
-    font-size: 16px;
+    font-size: 18px;
 
 }
-
-.subscr-form{
-    margin-top: 25px;
-    vertical-align: bottom;
-}
-
 
 .inpfield{
     width: 70%;
@@ -356,6 +368,7 @@ padding: 5px;
 }
 
 .submbtn{
+    font-size: 18px;
     background-color:rgb(89, 114, 117);
     color: white;
     height: 35px;
@@ -371,7 +384,6 @@ padding: 5px;
 }
 
 .gray-ft-twitter-post{
-    align-items: flex-start;
     background-color: rgb(89, 114, 117);
     border-radius: 4px;
     padding: 20px;
@@ -383,10 +395,6 @@ padding: 5px;
     line-height: 1.5em;
 }
 
-.subscr-mail-img, .twitter-img{
-    margin-top: auto;
-    margin-bottom: auto;
-}
 
 .twitter-txt p, .subscr-mail-txt p{
     margin: 0;
@@ -396,11 +404,21 @@ padding: 5px;
     text-decoration: underline;
     font-weight: bolder;
 }
-/* second */
+
+
+/* SOCIAL */
 
 .white-ft{
-    margin-top: 30px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col{
+    display: inline-flex;
 }
 
 .round-img{
@@ -427,11 +445,6 @@ padding: 5px;
     height:70px;
 }
 
-
-.col{
-    display: inline-flex;
-}
-
 .soctxt{
     width: 250px;   
     color: rgb(99, 127, 131);
@@ -447,12 +460,12 @@ padding: 5px;
 }
 
 
-/* third */
+/* FOOTER */
 
 .ft-gr3-txt{
     
     color: white;
-    line-height: 1.5em;
+    line-height: 1.714;
     padding: 20px;
 }
 
