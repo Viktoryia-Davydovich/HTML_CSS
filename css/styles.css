@@ -1,5 +1,6 @@
 html{
     height:100%;
+    margin:0;
 }
 
 body{
@@ -21,6 +22,10 @@ body{
     .container {
         width: 90%;
     }
+}
+
+.hide-desktop {
+    display: none;
 }
 
 .header-nav-logo-stripe{
@@ -575,6 +580,39 @@ padding: 5px;
     .inpfield{
         width: 72%;
     }
+
+    .hide-desktop {
+        display: inline-block;
+    }
+
+    .nav-stripe{
+        position: fixed;
+        margin: 0;
+        top: 0;
+        right: 0;
+        padding-right: 20px;   
+        background-color: rgb(89, 114, 117, .85);
+        width: 200px;
+        height: 100%;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-top: 10px;
+    }
+
+    .nav-stripe li{
+        color: white;
+    }
+
+    .menu{
+        text-align: end;
+    }
+
+    .header-nav-logo-stripe{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
 }
 
 
