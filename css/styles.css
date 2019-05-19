@@ -1,11 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
-
 html{
     height:100%;
 }
-
 
 body{
     margin:0;
@@ -15,7 +10,6 @@ body{
     font-size: 14px;
 }
 
-
 .container{
     width: 80%;
     margin-left: auto;
@@ -23,12 +17,17 @@ body{
     overflow-x:hidden;
 }
 
+@media screen and (max-width: 1021px) {
+    .container {
+        width: 90%;
+    }
+}
+
 .header-nav-logo-stripe{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    padding: 10px 0 10px 0;
+    padding-top: 10px;
 }
 
 .nav-logo{
@@ -50,8 +49,9 @@ body{
 
 .nav-stripe{
     list-style-type: none;
-    padding-left:0;
+    padding:0;
     display: flex;
+    justify-content: space-between;
 }
 
 .nav-stripe li img{
@@ -63,7 +63,6 @@ body{
 }
 
 .nav-stripe li{
-    padding-right: 5%;  
     color: rgb(99, 127, 131);
     font-weight: bold;
     font-size: 16px;
@@ -73,6 +72,19 @@ body{
     flex-direction: column;
     align-items: top;
 }
+
+@media screen and (max-width: 970px) {
+    .nav-stripe li {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .nav-stripe li {
+        font-size: 12px;
+    }
+}
+
 
 .nav-stripe :first-child img{
     visibility: visible;
@@ -178,7 +190,7 @@ a:hover{
     padding: 0 5%;
     text-align: center;
     background-color: rgb(246, 246, 246);
-    align-items: baseline;
+    align-items: bottom;
     display: flex;
 }
 
@@ -222,6 +234,33 @@ a:hover{
 .morebtn:hover{
     cursor: pointer;
   }
+
+@media screen and (max-width: 1231px) {
+    .option {
+        padding: 5% 2%;
+    }
+}
+
+@media screen and (max-width: 1116px) {
+    .option {
+        padding: 5% 1%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .options-stripe{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .option{
+        width: 100%;
+    }
+
+    .option:first-child, .option:nth-child(2), .option:nth-child(3){
+        border-right: none;
+    }
+}
 
 .bckg-orange{
     text-align: center;
@@ -271,6 +310,24 @@ padding: 5px;
     width: 45%;
     border-top: 1px solid rgb(213, 213, 213);
     display: inline-block;
+}
+
+@media screen and (max-width: 813px){
+    .line-half{
+        width: 44%;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .line-half{
+        width: 42%;
+    }
+}
+
+@media screen and (max-width: 514px){
+    .line-half{
+        width: 40%;
+    }
 }
 
 .feedbacks-section{
@@ -383,6 +440,32 @@ padding: 5px;
     cursor: pointer;
 }
 
+@media screen and (max-width: 1061px) {
+    .gray-ft-subscr {
+        flex-flow: column;
+    }
+
+    .gray-ft-subscr-form{
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .gray-ft-twitter-post{
+        width: 94%;
+    }
+
+    .inpfield{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .inpfield{
+        width: 74%;
+    }
+}
+
 .gray-ft-twitter-post{
     background-color: rgb(89, 114, 117);
     border-radius: 4px;
@@ -417,6 +500,12 @@ padding: 5px;
     justify-content: space-between;
 }
 
+@media screen and (max-width: 1000px) {
+    .white-ft {
+        width: 90%;
+    }
+}
+
 .col{
     display: inline-flex;
 }
@@ -424,6 +513,7 @@ padding: 5px;
 .round-img{
     background: url('../images/cir.png') no-repeat center center;
     width: 70px;
+    height:70px;
     background-size:contain;
     vertical-align: middle;
 }
@@ -445,18 +535,46 @@ padding: 5px;
     height:70px;
 }
 
-.soctxt{
-    width: 250px;   
+.soctxt{ 
     color: rgb(99, 127, 131);
     line-height: 1.5em;
     text-align: left;
     padding-left: 10px;
-    vertical-align: middle;
 }
 
 .soctxt p span{
     font-size: 18px;
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 747px) {
+    .nav-stripe{
+        flex-flow: column;
+        align-items: flex-end;
+    }
+
+    .nav-stripe li{
+        font-size: 18px;
+    }
+
+    .nav-stripe :first-child img{
+        display: none;
+    }
+    
+    .white-ft{
+        flex-flow: column;
+        align-items: center;
+        align-content: flex-start;
+    }
+
+    .row{
+        flex-flow: column;
+    }
+
+    .inpfield{
+        width: 72%;
+    }
 }
 
 
