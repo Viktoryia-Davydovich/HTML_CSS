@@ -142,7 +142,7 @@ body{
 }
 
 
-.nav-stripe :first-child img{
+.nav-stripe .selected img{
     visibility: visible;
 }
 
@@ -585,6 +585,16 @@ padding: 5px;
     }
 }
 
+@media screen and (max-width: 488px) {
+    div form{
+        display: flex;
+    }
+
+    .submbtn{
+        font-size: 14px;
+    }
+}
+
 .gray-ft-twitter-post{
     background-color: rgb(89, 114, 117);
     border-radius: 4px;
@@ -622,11 +632,13 @@ padding: 5px;
 
 @media screen and (max-width: 1061px) {
     .white-ft .container{
-        flex-flow: column;
-        align-items: left;
-        align-content: center;
-        background-color: bisque;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 15px;
+        justify-content: center;
     }
+
 }
 
 
