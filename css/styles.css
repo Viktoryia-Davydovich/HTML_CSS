@@ -407,39 +407,18 @@ a:hover{
 }
 
 .line-with-arrows{
-    text-align: center;
-}
-
-.line{
-display: inline;
-padding: 5px;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: auto 20px 20px auto;
+    grid-column-gap: 15px;
 }
 
 .line-half{
-    padding-bottom: 10px;
-    width: 45%;
     border-top: 1px solid rgb(213, 213, 213);
-    display: inline-block;
-    margin: 0;
+    position: relative;
+    top: 10px;
 }
 
-@media screen and (max-width: 813px){
-    .line-half{
-        width: 44%;
-    }
-}
-
-@media screen and (max-width: 680px){
-    .line-half{
-        width: 42%;
-    }
-}
-
-@media screen and (max-width: 514px){
-    .line-half{
-        width: 40%;
-    }
-}
 
 .feedbacks-section{
     margin: 40px 0;
