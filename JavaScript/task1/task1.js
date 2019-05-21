@@ -10,7 +10,7 @@ Array.prototype.map = function(projectionFunction) {
     return arr;
     };
 
-JSON.stringify([1,2,3].map(function(x) { return x + 1; })) === '[2,3,4]';
+console.log([1,2,3].map(function(x) { return x + 1; })) === '[2,3,4]';
 
 
 /*б*/
@@ -74,7 +74,7 @@ Array.prototype.filter = function(predicateFunction) {
     return filteredArray;
 }
 
-JSON.stringify([1,2,3].filter(function(x) { return x > 2})) === "[3]";
+console.log([1,2,3].filter(function(x) { return x > 2})) === "[3]";
 
 
 
@@ -256,7 +256,7 @@ function findGreatest(arr){
     })
 }
 
-alert(findGreatest(ratings));
+console.log(findGreatest(ratings));
 
 
 /*ж*/
@@ -282,10 +282,16 @@ var boxarts = [{
 
 
     function urlByGreatestSquare(arr){
-        
-    } 
+        return arr.reduce((acc, obj) => 
+        {
+            if (acc === undefined || obj['width'] * obj['height'] > acc['width'] * acc['height']){
+                acc = obj;
+            }
+            return acc.url;
+        });
+    }
 
-alert(urlByGreatestSquare(boxarts));
+console.log(urlByGreatestSquare(boxarts));
 
 /*з*/
 
@@ -314,3 +320,12 @@ Expecting this output...
         "id": 654356453,
         "title": "Bad Boys"
         }];
+
+function newObj(arr){
+    return arr.reduce(function(acc, curr){
+        acc[curr['id']] = curr['title'];
+        return acc;
+    }, {});
+};
+
+console.log(newObj(videos));
