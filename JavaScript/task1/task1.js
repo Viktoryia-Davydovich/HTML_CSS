@@ -219,3 +219,24 @@ function movieFilter(arr){
 }
 
 console.log(movieFilter(movieLists));
+
+
+/*д*/
+
+/* Создать свою реализацию функции reduce для массивов
+Array.prototype.reduce = function(combiner, initialValue) {
+}
+// [1,2,3].reduce(function(memo, item) { return memo + item; }); === [6];
+// [1,2,3].reduce(function(memo, item) { return memo + item; }, 10); === [16];*/
+
+Array.prototype.reduce = function(combiner, initialValue) {
+    let sum = initialValue === undefined ? 0: initialValue
+
+    for (let i = 0; i < this.lenth; i++){
+        sum = combiner(sum, this[i], i, this)
+    }
+    return sum;
+}
+
+alert([1,2,3].reduce(function(memo, item) { return memo + item; }));
+alert([1,2,3].reduce(function(memo, item) { return memo + item; }, 10));
