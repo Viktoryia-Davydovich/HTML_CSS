@@ -238,5 +238,79 @@ Array.prototype.reduce = function(combiner, initialValue) {
     return sum;
 }
 
-alert([1,2,3].reduce(function(memo, item) { return memo + item; }));
-alert([1,2,3].reduce(function(memo, item) { return memo + item; }, 10));
+console.log([1,2,3].reduce(function(memo, item) { return memo + item; }));
+console.log([1,2,3].reduce(function(memo, item) { return memo + item; }, 10));
+
+/*е*/
+
+/*С помощью функции reduce получить максимальное значение в массиве
+var ratings = [2,3,1,4,5]; */
+
+var ratings = [2,3,1,4,5];
+
+function findGreatest(arr){
+    return arr.reduce((acc, val) => 
+    {
+        acc = (acc === undefined || val > acc) ? val : acc
+        return acc;
+    })
+}
+
+alert(findGreatest(ratings));
+
+
+/*ж*/
+/*С помощью функций map, reduce, вывести url у которого самая большая площадь*/
+
+var boxarts = [{
+    width: 200,
+    height: 200,
+    url: "http://cdn-0.nflximg.com/images/2891/Fracture200.jpg"
+    }, {
+    width: 150,
+    height: 200,
+    url: "http://cdn-0.nflximg.com/images/2891/Fracture150.jpg"
+    }, {
+    width: 300,
+    height: 200,
+    url: "http://cdn-0.nflximg.com/images/2891/Fracture300.jpg"
+    }, {
+    width: 425,
+    height: 150,
+    url: "http://cdn-0.nflximg.com/images/2891/Fracture425.jpg"
+    }];
+
+
+    function urlByGreatestSquare(arr){
+        
+    } 
+
+alert(urlByGreatestSquare(boxarts));
+
+/*з*/
+
+/*Преобразуйте массив в объект используя функцию reduce. Используйте начальное
+значение (второй параметр)
+
+Expecting this output...
+{
+    "65432445": "The Chamber",
+    "675465": "Fracture",
+    "70111470": "Die Hard",
+    "654356453": "Bad Boys"
+}
+*/
+
+    var videos = [{
+        "id": 65432445,
+        "title": "The Chamber"
+        }, {
+        "id": 675465,
+        "title": "Fracture"
+        }, {
+        "id": 70111470,
+        "title": "Die Hard"
+        }, {
+        "id": 654356453,
+        "title": "Bad Boys"
+        }];
