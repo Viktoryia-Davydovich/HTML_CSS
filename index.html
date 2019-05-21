@@ -1,225 +1,257 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/styles.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     </head>
 
     <body>
             <!-- HEADER START -->
-            <div class="header">
-                <div class="nav">
+            <header>
+                <div class="header-nav-logo-stripe">
                     <div class="nav-logo">
                         <a>Site Name</a>
                     </div>
-                    <div class="menu">
+                    <nav class="menu">
                         <ul class=nav-stripe>
-                            <li><a class="home-tab">home</a></li>                  
-                            <li><a class=about-tab>about</li>
-                            <li><a class=services-tab>services</a></li>
-                            <li><a class="project-tab">project</a></li>
-                            <li><a class=blog-tab>blog</a></li> 
-                            <li><a class="contact-tab">contact</a></li> 
+                            <li class="selected">
+                                <img src="images/nav-arr.png">
+                                <a class="home-tab">home</a>
+                            </li>                  
+                            <li>
+                                <img src="images/nav-arr.png">
+                                <a class=about-tab>about</a>
+                            </li>
+                            <li>
+                                <img src="images/nav-arr.png">
+                                <a class=services-tab>services</a>
+                            </li>
+                            <li>
+                                <img src="images/nav-arr.png">
+                                <a class="project-tab">project</a>
+                            </li>
+                            <li>
+                                <img src="images/nav-arr.png">
+                                <a class=blog-tab>blog</a>
+                            </li> 
+                            <li>
+                                <img src="images/nav-arr.png">
+                                <a class="contact-tab">contact</a>
+                            </li> 
                         </ul>
-                    </div>
+                    </nav>
                 </div>
                 <div class="main-pict">
-                    <div class="bckg-text-big">
+                    <h1 class="bckg-text-big">
                         <p>Lorem ipsum laro <br>dolore sit amet vivamus</p>
-                    </div>
-                    <div class="bckg-text-small">
+                    </h1>
+                    <h2 class="bckg-text-small">
                         <p>Lorem ipsum laro sit amet <br>dolore sit ame</p>   
-                    </div>
+                    </h2>
                     <div class="A">
-                    <div class="bckg-img-round"><a name="go-down">
-                        <div class="bckg-img-arr"></div>
-                    </div></a>
+                    <div class="bckg-img-round"><a href="#go-down">
+                        <div class="bckg-img-arr"></div></a>
+                    </div>
                     </div>
                 </div>
-            </div>
+            </header>
 
             <!-- HEADER END -->
 
             <!-- MAIN START -->
 
-            <div class="main">
-                <div class="text-stripe">
-                    <p class="p1">Lorem ipsum dolore sit amet</p>
-                    <p class="p2">Donec odio uisque mattis eros ullam malesuada erat ul turpis.</p>
+            <main>
+                <div class="header-stripe">
+                    <h1>Lorem ipsum dolore sit amet</h1>
+                    <p>Donec odio uisque mattis eros ullam malesuada erat ul turpis.</p>
                 </div>
-                <div class="options-stripe">
+                <section class="options-stripe">
                         <div class="option">
                                 <img src="images/dig.png">
                                 <p class="name">Nunc dignissim</p>
-                                <p class="descr">Praesent dapibus, neque id curs us faucibus, tortor neque egest</p>
+                                <p class="descr">Praesent dapibus, neque id curs us faucibus,
+                                     tortor neque egestas augue, eu vulputate magn</p>
                                 <button class="morebtn">More</button>                            
-                            </div>
-                            <div class="option">
+                        </div>
+                        <div class="option">
                                 <img src="images/aliq.png">
-                                <p class="name">Nunc dignissim</p>
-                                <p class="descr">Praesent dapibus, neque id curs us faucibus, tortor neque egest</p> 
+                                <p class="name">Aliquam tinci</p>
+                                <p class="descr">Donec suscipit varius ex varius cursus. Nam nulla cuam,
+                                     gravida info</p> 
                                 <button class="morebtn">More</button>                    
-                            </div>
-                            <div class="option">
+                        </div>
+                        <div class="option">
                                 <img src="images/vest.png">
-                                <p class="name">Nunc dignissim</p>
-                                <p class="descr">Praesent dapibus, neque id curs us faucibus, tortor neque egest</p>
+                                <p class="name">Vestibu auctor</p>
+                                <p class="descr">Jorbi rbi est est, blandit sit amet, sagittis vel, euismod vel,
+                                     velit. Pellentesque egestas sem.</p>
                                 <button class="morebtn">More</button>
-                            </div>
-                            <div class="option">
+                        </div>
+                        <div class="option">
                                 <img src="images/civam.png">
-                                <p class="name">Nunc dignissim</p>
-                                <p class="descr">Praesent dapibus, neque id curs us faucibus, tortor neque egest</p>
+                                <p class="name">Civamus vesti</p>
+                                <p class="descr">Morbi est est, blandit sit amet, sagittis vel, euismod vel,
+                                     velit. Pellentesque egestas sem.</p>
                                 <button class="morebtn">More</button> 
-                            </div>
-                </div>
+                        </div>
+                </section>
                 <div class="container">
-                <div class="text-stripe2">
-                        <p class="p1">Lorem ipsum dolore sit ame</p>
-                        <p class="p2">Donec odio uisque mattis eros ullam malesuada erat ul turpis</p>
-                </div>
-                <div class="line-with-arrows">
-                    <div class="line line1"><hr size="0.7px"/></div>
-                    <div class="line-arr1"><a><img src="images/arrright.png"></a></div>
-                    <div class="line-arr2"><a><img src="images/arrleft.png"></a></div>
-                    <div class="line line2"><hr size="0.7px"/></div>
-                </div>
-                <div class="bckg-orange">
-                    <img src="images/orange1.png">
-                </div>
-                <div class="orangebtn">
-                    <button class="btn-view-portf">
-                        View Portfolio
-                    </button>
-                </div>
-                <hr class="sep-line" size="0.7px">
-                <div class="feedbacks-section">
-                    <div class="row">
-                            <div class="fdb">
-                                <div class="column">
-                                    <img src="images/person1.png">
-                                </div>
-                                <div class="column">
-                                    <p>
-                                        <span>Lorem ipsum dolor</span><br>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat <a class="plsmore">+more</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="fdb">
-                                <div class="column">
-                                    <img src="images/person2.png">
-                                </div>
-                                <div class="column">
-                                    <p>
-                                            <span>Lorem ipsum dolor</span><br>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat <a class="plsmore">+more</a>
-                                    </p>
-                                </div>
-                            </div>                      
+                    <div class="header-stripe">
+                            <a name="go-down"><h1>Cras ornare tristique elit</h1></a>
+                            <p>Donec odio uisque volutpat mattis eros ullam malesuada erat ut turpis.</p>
                     </div>
-                    <div class="row">
-                            <div class="fdb">
-                                <div class="column">
-                                    <img src="images/person3.png">
+                    <div class="line-with-arrows">
+                        <div class="line-half"></div>
+                        <div class="line"><a><img src="images/arrright.png"></a></div>
+                        <div class="line"><a><img src="images/arrleft.png"></a></div>
+                        <div class="line-half"></div>
+                    </div>
+                    <div class="bckg-orange">
+                        <img src="images/orange1.png">
+                    </div>
+                    <div class="orangebtn">
+                        <button class="btn-view-portf">
+                            View Portfolio
+                        </button>
+                    </div>
+                    <section class="feedbacks-section">
+                                <article class="fdb">
+                                    <div class="column">
+                                        <img src="images/person1.png">
+                                    </div>
+                                    <div class="column">
+                                        <p>
+                                            <span>Integer vitae libero</span><br>
+                                            Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue,
+                                             eu vulputate magna eros eu erat. 
+                                            Aliquam erat volutpat. Nam dui mi, tincidunt lorem ipsuk dolor
+                                             <a class="plsmore">+more</a>
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="fdb">
+                                        <div class="column">
+                                            <img src="images/person3.png">
+                                        </div>
+                                        <div class="column">
+                                            <p>
+                                                <span>Fusce pellentesque</span><br>
+                                                Cations t dapibus, neque id cursus faucibus, tortor neque egestas augue,
+                                                 eu vulputate magna eros eu erat. 
+                                                Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, 
+                                                facilisis luctus, metus <a class="plsmore">+more</a>
+                                            </p>
+                                        </div>
+                                </article>
+                                <article class="fdb">
+                                    <div class="column">
+                                        <img src="images/person2.png">
+                                    </div>
+                                    <div class="column">
+                                        <p>
+                                            <span>Vestibulum commodo</span><br>
+                                            Lorem dapibus, neque id cursus faucibus, tortor neque egestas augue,
+                                             eu vulputate magna eros eu erat.
+                                            Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor <a class="plsmore">+more</a>
+                                        </p>
+                                    </div>
+                                </article>                      
+                                <article class="fdb">
+                                    <div class="column">
+                                        <img src="images/person4.png">
+                                    </div>
+                                    <div class="column">
+                                        <p>
+                                            <span>Donec quis dui dolor</span><br>
+                                            Sumitris dapibus, neque id cursus faucibus, tortor neque egestas augue,
+                                             eu vulputate magna eros eu erat. 
+                                            Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+                                            facilisis luctus, metus <a class="plsmore">+more</a>
+                                        </p>
+                                    </div>
+                                </article>
+                        </section>            
+                </div>
+
+                <div class="gray-ft">
+                    <div class="container">                
+                        <div class="header-stripe wht-fnt">
+                            <h1>Cras ornare tristique elit</h1>
+                            <p>Donec odio uisque volutpat mattis erros ulam malesuada erat ut turpis.</p>
+                        </div>
+                        <div class="gray-ft-subscr">
+                            <div class="gray-ft-subscr-form">
+                                <div class="gray-ft-newsltr">
+                                    <div class="subscr-mail-img">
+                                        <img src="images/mail.png">
+                                    </div>
+                                    <div class="subscr-mail-txt">
+                                        <p><span>Subscribe Our Newsletter</span><br>
+                                        via email on how to grow busuness online</p>
+                                    </div>
                                 </div>
-                                <div class="column">
-                                    <p>
-                                            <span>Lorem ipsum dolor</span><br>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat <a class="plsmore">+more</a>
-                                    </p>
+                                <div>
+                                    <form class="signup-field">
+                                        <input class="inpfield" type="text"/>
+                                        <input class="button submbtn" value="Sign up"></button>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="fdb">
-                                <div class="column">
-                                    <img src="images/person4.png">
+                            <div class="gray-ft-twitter-post">
+                                <div class="twitter-img">
+                                    <img src="images/dove.png">
                                 </div>
-                                <div class="column">
-                                    <p>
-                                            <span>Lorem ipsum dolor</span><br>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat <a class="plsmore">+more</a>
-                                    </p>
+                                <div class="twitter-txt">
+                                    <p>Donec nec justo eget felis facilisis fermentum.
+                                        Aliquam porttitor mauris sit amet orci.
+                                        Aenean dignissim pellentesque felis, euismod in, pharetra a,
+                                         ultricies in, diam. Sed arcu. Cras consequat.
+                                         <a class="twitlink">@johndoe</a></p>
                                 </div>
                             </div>
                         </div>
-                    </div>            
+                    </div>                 
                 </div>
-            </div>
 
+                    <div class="white-ft">
+                        <div class="container">
+                            <a><div class="col">
+                                <div class="round-img">
+                                    <div class="fb"></div>
+                                </div>
+                                <div class="soctxt"><p><span>Follow us on Facebook</span><br>
+                                    Faucibus toroot menuts</p></div>
+                            </div></a>
+                            <a><div class="col">
+                                <div class="round-img">
+                                    <div class="gpls"></div>
+                                </div>
+                                <div class="soctxt"><p><span>Follow us on Google+</span><br>
+                                    Faucibus toroot menuts</p></div>
+                            </div></a>
+                            <a><div class="col">
+                                <div class="round-img">
+                                    <div class="lkd"></div>
+                                </div>
+                                <div class="soctxt"><p><span>Follow us on LinkedIn</span><br>
+                                    Faucibus toroot menuts</p></div>
+                            </div></a>
+                        </div>
+                    </div>
+            </main>
             <!-- MAIN END -->
 
             <!--FOOTER START -->
 
-            <div class="footer">
-                <div class="gray-ft">
-                    <div class="container">
-                        <div class="ft1">
-                            <div clas="gr-ft1-txt">
-                                <p class="p1-ft"><span>Cras ornare tristique elit</span><br>Donec odio uisque volutpat mattis erros ulam malesuada erat ut turpis.</p>
-                            </div>
-                        </div>
-                        <div class="subscr-twitt">
-                            <div class="cellw cell">
-                                <div>
-                                    <div class="cell cellmailimg">
-                                        <img src="images/mail.png">
-                                    </div>
-                                    <div class="cell celltxt">
-                                        <p><span>Subscribe Our Newsletter</span><br>via email on how to grow busuness online</p>
-                                    </div>
-                                </div>
-                                <form>
-                                    <input class="inpfield" type="text"/>
-                                    <input class="submbtn"  type="submit"/>
-                                </form>
-                            </div>
-                            <div class="cellw cell">
-                                <div class="twittercit">
-                                    <div class="cell celldoveimg">
-                                        <img src="images/dove.png">
-                                    </div>
-                                    <div class="cell celltxt">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<a class="twitlink">@johndoe</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="white-ft">
-                    <div class="row white-row">
-                        <a><div class="col">
-                            <div class="col round-img">
-                                <div class="fb"></div>
-                            </div>
-                            <div class="col soctxt"><p><span>Follow us on Facebook</span><br>Lorem ipsum dolor</p></div>
-                        </div></a>
-                        <a><div class="col">
-                            <div class="col round-img">
-                                <div class="gpls"></div>
-                            </div>
-                            <div class="col soctxt"><p><span>Follow us on Google+</span><br>Lorem ipsum dolor</p></div>
-                        </div></a>
-                        <a><div class="col">
-                            <div class="col round-img">
-                                <div class="lkd"></div>
-                            </div>
-                            <div class="col soctxt"><p><span>Follow us on LinkedIn</span><br>Lorem ipsum dolor</p></div>
-                        </div></a>
-                    </div>
-                </div>
-
+            <footer>
                 <div class="gray-ft ft2">
-                    <p class="ft-gr3-txt">Designed by: www.alltemplateneeds.com / Images from: www.wallpaperswide.com / www.phototrack.net Copyright (c) website name.</p>
+                    <p class="ft-gr3-txt">Designed by: www.alltemplateneeds.com / 
+                        Images from: www.wallpaperswide.com / www.photorack.net Copyright(c) website name.</p>
                 </div>
-            </div>
+            </footer>
             <!--FOOTER END -->
-
     </body>
 </html>
