@@ -232,8 +232,8 @@ Array.prototype.reduce = function(combiner, initialValue) {
 Array.prototype.reduce = function(combiner, initialValue) {
     let sum = initialValue === undefined ? 0: initialValue
 
-    for (let i = 0; i < this.lenth; i++){
-        sum = combiner(sum, this[i], i, this)
+    for (let i of this){
+        sum = combiner(sum, i)
     }
     return sum;
 }
