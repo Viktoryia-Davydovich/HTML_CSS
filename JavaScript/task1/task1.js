@@ -2,16 +2,16 @@
 
 /*Создать свою реализацию функции map для массивов*/
 
+
 Array.prototype.map = function(projectionFunction) {
     const arr = [];
-    for (let i =0; i < this.length; i++){
+    for (let i = 0; i < this.length; i++){
         arr.push(projectionFunction(this[i], i, this));
     }
     return arr;
     };
 
-console.log([1,2,3].map(function(x) { return x + 1; })) === '[2,3,4]';
-
+console.log(JSON.stringify([1,2,3].map(function(x) { return x + 1; })) === '[2,3,4]');
 
 /*б*/
 
@@ -74,7 +74,7 @@ Array.prototype.filter = function(predicateFunction) {
     return filteredArray;
 }
 
-console.log([1,2,3].filter(function(x) { return x > 2})) === "[3]";
+console.log(JSON.stringify([1,2,3].filter(function(x) { return x > 2})) === "[3]");
 
 
 
@@ -84,20 +84,7 @@ console.log([1,2,3].filter(function(x) { return x > 2})) === "[3]";
 
 // [675465, …]
 
-function ratingFilter(arr){
-    let filteredArray = [];
-
-    arr
-    .filter(function(obj){
-        if (obj['rating'][0] == 5.0){
-        filteredArray.push(obj['id']);
-        }
-    })
-
-    return filteredArray;
-}
-
-console.log(ratingFilter(newReleases));
+console.log(newReleases.filter(obj => obj.rating == 5).map(obj => obj.id));
 
 
 /*д*/
@@ -194,31 +181,38 @@ var movieLists = [
 {"id": 675465,"title": "Fracture","boxart":"http://cdn-0.nflximg.com/images/2891/Fracture150.jpg" }
 ];
 
+
+
+[
+    {
+        videos:
+        [
+            {id: 70111470, title: "Die Hard", boxarts: Array(2), url: "http://api.netflix.com/catalog/titles/movies/70111470", rating: 4},
+            {id: 654356453, title: "Bad Boys", boxarts: Array(2), url: "http://api.netflix.com/catalog/titles/movies/70111470", rating: 5}
+        ]
+
+    },
+    {
+        videos:
+        [
+            {id: 65432445, title: "The Chamber", boxarts: Array(2), url: "http://api.netflix.com/catalog/titles/movies/70111470", rating: 4, …},
+            {id: 675465, title: "Fracture", boxarts: Array(3), url: "http://api.netflix.com/catalog/titles/movies/70111470", rating: 5, …}
+        ]
+
+    };
+]
+
 */
 
-function movieFilter(arr){
-    let filteredArray = [];
-    let movieArray = [];
+var x = movieLists
+    .map(val => val.videos)
+    .reduce((pre, cur) => pre.concat(cur))
+    .map((e,i) =>
+    ({id:e.id, title:e.title, boxart: e.boxarts.filter((obj) => obj.height == 200 & obj.width == 150).map(({url}) => ({url}))}));
+    
 
-    arr
-    .filter(function(obj){
-        obj['videos'].filter(function(obj_lev2){
-            obj_lev2['boxarts'].filter(function(obj_lev3){
-                if (obj_lev3['width'] == 150 & obj_lev3['height'] == 200 )
-                filteredArray.push( Object.assign({}, obj_lev2, obj_lev3));
-            })
-        })       
-    })
-  
-    movieArray = filteredArray.map(function({id,title, url}){
-        let boxart = url;
-        return {id, title, boxart}
-    })
 
-    return movieArray;
-}
-
-console.log(movieFilter(movieLists));
+console.log(x);
 
 
 /*д*/
