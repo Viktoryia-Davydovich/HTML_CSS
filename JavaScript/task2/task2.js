@@ -17,7 +17,8 @@ var voltron = new Robot('Voltron');
 // “Voltron can count 50”
 // #4 Выведи результат сложения Voltron «drinking» и «beer» используя bind
 // “Voltron can count drinkingbeer”
-
+// #5 Написанный вами код должен вывести console.log имени которое лежит в
+// this.name пятью разными способами
 
 function bind(func, context) {
     return function() {
@@ -26,15 +27,21 @@ function bind(func, context) {
   }
 
 function showName() {
-    console.log(add(0,1));
-    console.log(add.call(voltron, 1, 2))
-    console.log(add.apply(voltron, [20, 30]));
-    
-    let a = add.bind(voltron);
-    console.log(a("drinking", "beer"));
-
-    let b = bind(add, voltron);
-    console.log(b("drinking", "beer"));)
+    setTimeout(function(){
+        //1st
+        console.log(add(0,1));
+        //2nd
+        console.log(add.call(voltron, 1, 2));
+        //3d
+        console.log(add.apply(voltron, [20, 30]));
+        //4th     
+        let a = add.bind(voltron);
+        console.log(a("drinking", "beer"));
+        //5th        
+        let b = bind(add, voltron);
+        console.log(b("drinking", "beer"));        
+    }, 1000)
 }
 
 showName();
+
