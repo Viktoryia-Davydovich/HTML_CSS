@@ -181,36 +181,17 @@ var movieLists = [
 {"id": 675465,"title": "Fracture","boxart":"http://cdn-0.nflximg.com/images/2891/Fracture150.jpg" }
 ];
 
-
-
-[
-    {
-        videos:
-        [
-            {id: 70111470, title: "Die Hard", boxarts: Array(2), url: "http://api.netflix.com/catalog/titles/movies/70111470", rating: 4},
-            {id: 654356453, title: "Bad Boys", boxarts: Array(2), url: "http://api.netflix.com/catalog/titles/movies/70111470", rating: 5}
-        ]
-
-    },
-    {
-        videos:
-        [
-            {id: 65432445, title: "The Chamber", boxarts: Array(2), url: "http://api.netflix.com/catalog/titles/movies/70111470", rating: 4, …},
-            {id: 675465, title: "Fracture", boxarts: Array(3), url: "http://api.netflix.com/catalog/titles/movies/70111470", rating: 5, …}
-        ]
-
-    };
-]
-
 */
 
 var x = movieLists
     .map(val => val.videos)
     .reduce((pre, cur) => pre.concat(cur))
-    .map((e,i) =>
-    ({id:e.id, title:e.title, boxart: e.boxarts.filter((obj) => obj.height == 200 & obj.width == 150).map(({url}) => ({url}))}));
-    
-
+    .map((e) =>
+    ({id:e.id, title:e.title, boxart: e.boxarts
+        .filter((obj) => obj.height == 200 & obj.width == 150)
+        .map(({url}) => url)[0]       
+    })
+    );
 
 console.log(x);
 
@@ -275,17 +256,18 @@ var boxarts = [{
     }];
 
 
-    function urlByGreatestSquare(arr){
-        return arr.reduce((acc, obj) => 
-        {
-            if (acc === undefined || obj['width'] * obj['height'] > acc['width'] * acc['height']){
-                acc = obj;
-            }
-            return acc.url;
-        });
+const arr = boxarts
+    .map(({width, height, url}) => ({square: width*height, url}))
+    .reduce((acc,val) =>
+    {
+        if (acc === undefined || val.square > acc.square){
+            acc = val;
+        }
+        return acc.url;
     }
+)
 
-console.log(urlByGreatestSquare(boxarts));
+console.log(arr);
 
 /*з*/
 
