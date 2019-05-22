@@ -50,13 +50,11 @@ var newReleases = [{
     }];
 
 
-function transformArray(arr){
-    return arr.map(function({id,title}){
-        return {id, title}
-    });       
-}
+const rearrgangedArr = newReleases.map(function({id,title}){
+    return {id, title}
+});
 
-console.log(transformArray(newReleases));
+console.log(rearrgangedArr);
 
 
 /*в*/
@@ -223,15 +221,13 @@ var ratings = [2,3,1,4,5]; */
 
 var ratings = [2,3,1,4,5];
 
-function findGreatest(arr){
-    return arr.reduce((acc, val) => 
+const greatestRes = ratings.reduce((acc, val) => 
     {
         acc = (acc === undefined || val > acc) ? val : acc
         return acc;
     })
-}
 
-console.log(findGreatest(ratings));
+console.log(greatestRes );
 
 
 /*ж*/
@@ -297,11 +293,10 @@ Expecting this output...
         "title": "Bad Boys"
         }];
 
-function newObj(arr){
-    return arr.reduce(function(acc, curr){
+        
+const videoArr = videos.reduce(function(acc, curr){
         acc[curr['id']] = curr['title'];
         return acc;
     }, {});
-};
 
-console.log(newObj(videos));
+console.log(videoArr);
