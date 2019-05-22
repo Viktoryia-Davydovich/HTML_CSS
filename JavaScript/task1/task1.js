@@ -219,7 +219,7 @@ console.log([1,2,3].reduce(function(memo, item) { return memo + item; }, 10));
 /*С помощью функции reduce получить максимальное значение в массиве
 var ratings = [2,3,1,4,5]; */
 
-var ratings = [2,3,1,4,5];
+var ratings = [2,3,1,5,4];
 
 const greatestRes = ratings.reduce((acc, val) => 
     {
@@ -237,7 +237,13 @@ var boxarts = [{
     width: 200,
     height: 200,
     url: "http://cdn-0.nflximg.com/images/2891/Fracture200.jpg"
-    }, {
+    }, 
+    {
+    width: 425,
+    height: 150,
+    url: "http://cdn-0.nflximg.com/images/2891/Fracture425.jpg"
+    },
+    {
     width: 150,
     height: 200,
     url: "http://cdn-0.nflximg.com/images/2891/Fracture150.jpg"
@@ -245,23 +251,14 @@ var boxarts = [{
     width: 300,
     height: 200,
     url: "http://cdn-0.nflximg.com/images/2891/Fracture300.jpg"
-    }, {
-    width: 425,
-    height: 150,
-    url: "http://cdn-0.nflximg.com/images/2891/Fracture425.jpg"
     }];
 
 
+
 const arr = boxarts
-    .map(({width, height, url}) => ({square: width*height, url}))
-    .reduce((acc,val) =>
-    {
-        if (acc === undefined || val.square > acc.square){
-            acc = val;
-        }
-        return acc.url;
-    }
-)
+    .map(({width, height, url}) => ({square: width*height, url})).reduce(function(acc, val){
+        return (acc.square > val.square ? acc : val);
+    }).url;
 
 console.log(arr);
 
@@ -293,7 +290,7 @@ Expecting this output...
         "title": "Bad Boys"
         }];
 
-        
+
 const videoArr = videos.reduce(function(acc, curr){
         acc[curr['id']] = curr['title'];
         return acc;
