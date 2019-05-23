@@ -38,7 +38,7 @@ let interval_click;
 let intervalbg;
 
 function RandomInterval(){
-    var rand = 1 + Math.random() * (4 + 1 - 1);
+    var rand = 1 + Math.random() * 4;
     rand = Math.floor(rand);
     return rand * 1000;
 }
@@ -60,16 +60,19 @@ document.getElementById("bgbtn").onclick = function(){
 
 // 4th
 let inp = document.getElementById("inpfield");
+let interval_inp;
+
 inp.onkeyup = function(){
 
-    function timer(){
-        var text = inp.value;
-        console.log(text)
+    if (interval_inp){
+        clearTimeout(interval_inp);
+        interval_inp = null;
     }
-
-    setTimeout(timer, 1000);
+    else{
+        interval_inp = setTimeout(() => console.log(inp.value), 1000);
+    }
 }
-
 };
+
 
 
