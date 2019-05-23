@@ -8,6 +8,7 @@ function add (op1, op2) {
     }
 
 var voltron = new Robot('Voltron');
+voltron.add_case5 = add;
 
 // #1 Выведите результат сложения 0 и 1
 // "Human can count to 1"
@@ -38,10 +39,8 @@ function showName() {
         let a = add.bind(voltron);
         console.log(a("drinking", "beer"));
         //5th        
-        let b = bind(add, voltron);
-        console.log(b("drinking", "beer"));        
+        console.log(voltron.add_case5("drinking", "beer"));        
     }, 1000)
 }
 
 showName();
-

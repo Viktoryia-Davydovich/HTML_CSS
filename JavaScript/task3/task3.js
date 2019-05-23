@@ -1,11 +1,21 @@
 window.onload = function(){ 
 
 // 1st
+
+let interval_click;
+
     document.getElementById("grbtn").onclick = function(){
-        setTimeout(() => {
-            console.log("Hello world!")
-        }, 5000);
+        if (interval_click){
+            clearTimeout(interval_click);
+            interval_click = null;
+        }
+        else{
+            interval_click = setTimeout(() => {
+                console.log("Hello world!")
+            }, 5000);
+        }
     }
+
 
 //2nd
     let interval;
