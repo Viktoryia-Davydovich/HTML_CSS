@@ -81,4 +81,42 @@ twoSec()
     времени понадобилось на выполнение (максимальное значение 10
     конечно)
 
-  */
+
+*/
+
+function RandomOneToTen(){
+    var rand = 1 + Math.random() * (10 + 1 - 1);
+    rand = Math.floor(rand);
+    return rand;
+}
+
+async function asyncFunc(num){
+return new Promise(function(resolve, reject){
+    let dur = RandomOneToTen() * 1000;
+    setTimeout(() => 
+    {
+        console.log(`Function number is ${num + 1} and it took it ${dur / 1000}sec to start`);
+        return resolve(dur);
+    }
+    , dur);
+});
+}
+
+
+let rand = RandomOneToTen();
+let funcArr = [];
+
+for (i = 0; i < rand; i++){
+    funcArr.push(asyncFunc(i));
+}
+
+const timing = callback => {
+    const start = performance.now();
+  
+    return Promise.resolve(callback())
+      .finally(() => console.log(`All async functions took ${performance.now() - start} msec to run`));
+  }
+
+const asycOperation = () => Promise.all(funcArr);
+
+timing(asycOperation);
