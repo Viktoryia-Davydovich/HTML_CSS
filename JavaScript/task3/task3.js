@@ -56,8 +56,10 @@ inp.onkeyup = function(){
         var text = inp.value;
         console.log(text)
     }
+
     setTimeout(timer, 1000);
 }
+
 };
 
 
