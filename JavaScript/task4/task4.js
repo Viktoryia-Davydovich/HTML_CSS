@@ -49,7 +49,7 @@ new Promise(function(resolve, reject) {
     */
 
 function RandomInterval(){
-    var rand = 1 + Math.random() * (10 + 1 - 1);
+    var rand = 1 + Math.random() * 10;
     rand = Math.floor(rand);
     return rand * 1000;
 }
@@ -85,7 +85,7 @@ twoSec()
 */
 
 function RandomOneToTen(){
-    var rand = 1 + Math.random() * (10 + 1 - 1);
+    var rand = 1 + Math.random() * 10;
     rand = Math.floor(rand);
     return rand;
 }
