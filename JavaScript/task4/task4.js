@@ -102,21 +102,16 @@ return new Promise(function(resolve, reject){
 });
 }
 
-
-let rand = RandomOneToTen();
-let funcArr = [];
-
-for (i = 0; i < rand; i++){
-    funcArr.push(asyncFunc(i));
-}
-
-const timing = callback => {
+(function(){
+    let rand = RandomOneToTen();
+    let funcArr = [];
     const start = performance.now();
-  
-    return Promise.resolve(callback())
-      .finally(() => console.log(`All async functions took ${performance.now() - start} msec to run`));
-  }
+    
+    for (i = 0; i < rand; i++){
+        funcArr.push(asyncFunc(i));
+    }
 
-const asycOperation = () => Promise.all(funcArr);
-
-timing(asycOperation);
+    Promise.all(funcArr).then(results => {
+        console.log(`All async functions took ${performance.now() - start} msec to run`);
+    })
+}());
