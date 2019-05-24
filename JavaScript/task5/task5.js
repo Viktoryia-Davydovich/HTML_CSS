@@ -21,7 +21,7 @@ function anAsyncCall() {
 
 db.getAllDocs()
     .then(function (result) {
-        return new Promise.all(result.rows.map((row) => db.remove(row.doc)));
+        return new Promise.all(result.rows.forEach((row) => db.remove(row.doc)));
         }
     )
     .then(function () {
@@ -35,4 +35,4 @@ doAsync()
     .then(function () {
         throw new Error('nope');
     })
-    .catch(function (err) { console.log(err); });
+    .catch(function (err) { console.error(err); });
