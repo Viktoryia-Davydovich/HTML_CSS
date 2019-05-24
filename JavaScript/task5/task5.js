@@ -11,22 +11,23 @@ Promise.all([promise1, promise2]).then(function([videos, meta]){
 
 function anAsyncCall() {
     return doSomethingAsync()
-        .then(function(){
-            somethingComplicated();
-        });
+    .then(function(result){
+        somethingComplicated();
+        return result;
+    });
 }
 
 // 3)
 
 db.getAllDocs()
     .then(function (result) {
-        result.rows.forEach(function (row) {
-        db.remove(row.doc);
-        });
-    })
+        return new Promise.all(result.rows.map((row) => db.remove(row.doc)));
+        }
+    )
     .then(function () {
 // All docs must be removed!
 });
+
 
 // 4)
 
