@@ -10,13 +10,10 @@ Promise.all([promise1, promise2]).then(function([videos, meta]){
 //2)
 
 function anAsyncCall() {
-    return doSomethingAsync()
-    .then(function(result){
+    return doSomethingAsync().then(function() {
         somethingComplicated();
-        return result;
     });
 }
-
 // 3)
 
 db.getAllDocs()
